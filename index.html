@@ -9,22 +9,24 @@
   <link rel=stylesheet type=text/css href="./app.css">
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.js" ></script>
 </head>
-  <body id=app>
-      <h1>
-         Abeceda ⇋ runy
-      </h1>
-      <i>ᛆᛒᚧᛍᚧᛑᛆ ⇋ ᚱᚢᚿᛦ</i>
-      <textarea
-          v-model=text
-          name=text
-          v-on:keyUp=translate
-          placeholder="Napiš text, který chceš přeložit."
-          ></textarea>
-      <br />
-      <a v-on:click=swap name=swap v-if=translated>
-          ⥮
-      </a>
-      <p id=translated>{{translated}}</p>
+  <body>
+      <div id=app>
+          <h1>
+             Abeceda ⇋ runy
+          </h1>
+          <i>ᛆᛒᚧᛍᚧᛑᛆ ⇋ ᚱᚢᚿᛦ</i>
+          <textarea
+              v-model=text
+              name=text
+              v-on:keyUp=translate
+              placeholder="Napiš text, který chceš přeložit."
+              ></textarea>
+          <br />
+          <a v-on:click=swap name=swap v-if=translated>
+              ⥮
+          </a>
+          <p id=translated>{{translated}}</p>
+      </div>
       <script type="text/javascript" src="./app.js" ></script>
   </body>
 </html>
