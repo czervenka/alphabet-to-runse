@@ -6,29 +6,30 @@ const latin = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ.:+',
       latin_runes = latin + runes + common,
       runes_latin = runes + latin + common;
 
-let text = '';
-
-if (location.hash.length) {
-  text = decodeURI(location.hash).substr(1);
-}      
 
 var app = new Vue({
   el: '#app',
   data: {
     translated: '',
-    text: text
+    text: ''
   },
-  created: function () {this.translate()},
+  created: function () {
+      let urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('t')) {
+          this.text = urlParams.get('t');
+          this.translate();
+      }
+  },
   methods: {
       translate: function () {
+        console.log('translating', this.text);
         text = this.text.toLocaleUpperCase().split('')
             .map(char=>accents.indexOf(char)>=0 ? accentsInAscii[accents.indexOf(char)] : char)
-            .join('');
-        this.translated = this.text
-            .split('')
+        this.translated = text
             .map(char=>latin_runes[runes_latin.indexOf(char)])
             .join('');
-        this.text = text;
+        this.text = text.join('');
+        console.log('translated', this.translated);
     	},
       swap: function () {
       	let tmp = this.text;
