@@ -1,7 +1,7 @@
 @font-face {
     font-family: Norse;
     /* src: url("./Norse.otf") format("opentype"); */
-    src: url("https://github.com/czervenka/runes/raw/master/Norse.otf") format("opentype");
+    src: url("./assets/Norse.otf") format("opentype");
 }
 
 body {
