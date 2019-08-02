@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya&display=swap');
+
+body {
+    padding: 1.5em;
+    margin: 0;
+    max-width: 400em;
+    font-size: 120%;
+    letter-spacing: 0.3em;
+    color: #444;
+    background: #EFD;
+    text-align: center;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+h1 + i {
+    display: block;
+    padding-bottom: 1em;
+}
+
+*[name=swap] {
+    font-size: 1em;
+    cursor: pointer;
+}
+body, td, textarea {
+    font-family: 'Alegreya', serif;
+}
+label {
+    font-weight: strong;
+}
+textarea[name=text] {
+    width: 100%;
+    height: 10em;
+    border: 2px solid #DDD;
+    padding: 1em;
+}
+#translated {
+    white-space: pre-wrap;
+    text-align: left;
+}
