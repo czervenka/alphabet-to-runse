@@ -4,7 +4,6 @@ body {
     padding: 1.5em;
     margin: 0;
     max-width: 400em;
-    font-size: 14px;
     letter-spacing: 0.3em;
     color: #444;
     background: #EFD;
@@ -27,6 +26,7 @@ h1 + i {
 }
 body, td, textarea {
     font-family: 'Alegreya', serif;
+    font-size: 14px;
 }
 label {
     font-weight: strong;
